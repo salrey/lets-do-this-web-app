@@ -6,7 +6,7 @@ const getMenu = () => {
     2. ❎ Do the dishes.
     3. ✅ Call the bank.
     4. ❎ Sign up for class.
-    (l) View all lists.
+    (l) Add new todo.
     (q) Quit
     `
     return menu
