@@ -2,8 +2,8 @@ const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 const getMenu = require('./getMenu')
 const makeToDo = require('./makeToDo')
+const todos = require("./todos");
 
-const todos = [];
 
 console.clear()
 
