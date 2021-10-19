@@ -1,20 +1,28 @@
 const todos = require("./todos");
+const readlineSync = require('readline-sync')
 
-const editTodo = () => {
-    const editMenu = `Which todo do you want to toggle?
-    ${todos.map((todo, i) => {
-      let symbol = '🆇'
-      if (todo.isComplete) {
-        symbol = '☑️'
-      }
-    
-      return `${ i + 1 }. ${ symbol } ${ todo.text }`
-    }).join('\n') }
-    
-    `
+const editTodo = (todo) => {
+    let symbol = "❎"
+    if (todo.isComplete) {
+        symbol = "✅"
+    }
     console.clear();
-    const editResponse = readlineSync.question(editMenu)
-    console.log(editResponse)
+    const editMenu = `How would you like to edit the following todo?
+
+${symbol} ${todo.text}
+
+(u) Mark it unfinished.
+(d) Mark it done.
+(e) Edit the text of the todo.
+(d) Delete the todo.
+`
+    const response = readlineSync.question(editMenu)
+    if (response === 'x') {
+        todo.isComplete = false;
+    } else if (response === 'x') {
+        todo.isComplete = false
+    }    
+    console.clear();
 }
 
 module.exports = editTodo;
