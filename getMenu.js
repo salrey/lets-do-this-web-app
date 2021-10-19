@@ -11,6 +11,7 @@ ${todos.map((todo, i) => {
 
     return `${i + 1}. ${symbol} ${todo.text}`
 }).join('\n')}
+(e) Edit a todo.
 (n) Add new todo.
 (q) Quit
     `
