@@ -4,10 +4,21 @@ const makeToDo = (text) => {
     return {
         text: text,
         isComplete: false,
+        //function here is a method/ it is a property of that object 
+        markComplete: function() {
+            this.isComplete = true;
+        },
+
+        markIncomplete: function() {
+            this.isComplete = false;
+        },
+
+        changeText: function(newText) {
+            this.text = newText;
+        },
     }
 }
 
 const todo = makeToDo('Walk the dog')
-console.log(todo)
 
 module.exports = makeToDo;

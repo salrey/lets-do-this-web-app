@@ -14,15 +14,17 @@ ${symbol} ${todo.text}
 (e) Edit the text of the todo.
 (x) Delete the todo.
 `
-//Implementing CRUD
+//Implementing CRUD and now implementing OOP via makeToDo methods
     const response = readlineSync.question(editMenu)
     if (response === 'u') {
-        todo.isComplete = false;
+        // change todo.isComplete = false; to OOP below
+        todo.markIncomplete();
     } else if (response === 'd') {
-        todo.isComplete = true;
+        todo.markComplete();
     } else if (response === 'e') {
         console.clear()
-        todo.text = readlineSync.question('What should we change the text to?\n\n')
+        const text = readlineSync.question('What should we change the text to?\n\n')
+        todo.changeText(text);
     } else if (response === "x") {
         todos.forEach((element, i) => {
             if (element.text === todo.text) {
