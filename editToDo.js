@@ -17,10 +17,10 @@ ${symbol} ${todo.text}
 (d) Delete the todo.
 `
     const response = readlineSync.question(editMenu)
-    if (response === 'x') {
+    if (response === 'u') {
         todo.isComplete = false;
-    } else if (response === 'x') {
-        todo.isComplete = false
+    } else if (response === 'd') {
+        todo.isComplete = true;
     }    
     console.clear();
 }

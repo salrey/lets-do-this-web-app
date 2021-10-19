@@ -20,13 +20,3 @@ ${todoList}
 }
 
 module.exports = getMenu;
-
-// function map(arr, callback) {
-//     const newArr = []
-//     for (let i =0; i < arr.length; i++) {
-//         newArr.push(element[i], i)
-//     }
-//     return newArr
-// }
-
-// map(numbers, (x) => x*2)
